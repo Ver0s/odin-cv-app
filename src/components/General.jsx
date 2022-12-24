@@ -2,6 +2,10 @@ import React, { Component } from 'react';
 
 class General extends Component {
 	render() {
+		const { name, surname, role, phone, email, description } =
+			this.props.general;
+		const { handleGeneralChange } = this.props;
+
 		return (
 			<div>
 				<h3 className="mb-2 text-lg font-bold">General info</h3>
@@ -14,7 +18,9 @@ class General extends Component {
 							type="text"
 							name="name"
 							id="name"
-							className="block w-full px-2 py-1 "
+							value={name}
+							onChange={handleGeneralChange}
+							className="block w-full rounded-md border-gray-300 px-2 py-1 "
 						/>
 					</div>
 					<div>
@@ -25,7 +31,9 @@ class General extends Component {
 							type="text"
 							name="surname"
 							id="surname"
-							className="block w-full px-2 py-1 "
+							value={surname}
+							onChange={handleGeneralChange}
+							className="block w-full rounded-md border-gray-300 px-2 py-1"
 						/>
 					</div>
 					<div>
@@ -36,7 +44,9 @@ class General extends Component {
 							type="text"
 							name="role"
 							id="role"
-							className="block w-full px-2 py-1 "
+							value={role}
+							onChange={handleGeneralChange}
+							className="block w-full rounded-md border-gray-300 px-2 py-1"
 						/>
 					</div>
 					<div>
@@ -47,7 +57,9 @@ class General extends Component {
 							type="tel"
 							name="phone"
 							id="phone"
-							className="block w-full px-2 py-1"
+							value={phone}
+							onChange={handleGeneralChange}
+							className="block w-full rounded-md border-gray-300 px-2 py-1"
 						/>
 					</div>
 					<div>
@@ -58,21 +70,22 @@ class General extends Component {
 							type="email"
 							name="email"
 							id="email"
-							className="block w-full px-2 py-1"
+							value={email}
+							onChange={handleGeneralChange}
+							className="block w-full rounded-md border-gray-300 px-2 py-1"
 						/>
 					</div>
 					<div>
-						<label
-							htmlFor="generalDescription"
-							className="mb-1 block "
-						>
+						<label htmlFor="description" className="mb-1 block ">
 							Description
 						</label>
 						<textarea
 							type="text"
-							name="generalDescription"
-							id="generalDescription"
-							className="block w-full px-2 py-1"
+							name="description"
+							id="description"
+							value={description}
+							onChange={handleGeneralChange}
+							className="block w-full rounded-md border-gray-300 px-2 py-1"
 						/>
 					</div>
 				</form>
