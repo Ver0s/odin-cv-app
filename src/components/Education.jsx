@@ -14,7 +14,7 @@ class Education extends Component {
 							type="text"
 							name="major"
 							id="major"
-							className="block w-full px-2 py-1"
+							className="block w-full rounded-md border-gray-300 px-2 py-1"
 						/>
 					</div>
 					<div>
@@ -25,7 +25,7 @@ class Education extends Component {
 							type="text"
 							name="university"
 							id="university"
-							className="block w-full px-2 py-1 "
+							className="block w-full rounded-md border-gray-300 px-2 py-1"
 						/>
 					</div>
 					<div>
@@ -39,7 +39,7 @@ class Education extends Component {
 							type="date"
 							name="educationStartDate"
 							id="educationStartDate"
-							className="block w-full px-2 py-1 "
+							className="block w-full rounded-md border-gray-300 px-2 py-1"
 						/>
 					</div>
 					<div>
@@ -53,7 +53,7 @@ class Education extends Component {
 							type="date"
 							name="educationEndDate"
 							id="educationEndDate"
-							className="block w-full px-2 py-1 "
+							className="block w-full rounded-md border-gray-300 px-2 py-1"
 						/>
 					</div>
 					<div>
@@ -67,7 +67,7 @@ class Education extends Component {
 							type="text"
 							name="educationDescription"
 							id="educationDescription"
-							className="block w-full px-2 py-1 "
+							className="block w-full rounded-md border-gray-300 px-2 py-1"
 						/>
 					</div>
 				</form>

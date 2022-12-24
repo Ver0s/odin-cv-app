@@ -15,7 +15,7 @@ class WorkExperience extends Component {
 							type="text"
 							name="companyName"
 							id="companyName"
-							className="block w-full px-2 py-1"
+							className="block w-full rounded-md border-gray-300 px-2 py-1"
 						/>
 					</div>
 					<div>
@@ -26,7 +26,7 @@ class WorkExperience extends Component {
 							type="text"
 							name="position"
 							id="position"
-							className="block w-full px-2 py-1"
+							className="block w-full rounded-md border-gray-300 px-2 py-1"
 						/>
 					</div>
 					<div>
@@ -37,7 +37,7 @@ class WorkExperience extends Component {
 							type="date"
 							name="workStartDate"
 							id="workStartDate"
-							className="block w-full px-2 py-1 "
+							className="block w-full rounded-md border-gray-300 px-2 py-1"
 						/>
 					</div>
 					<div>
@@ -48,7 +48,7 @@ class WorkExperience extends Component {
 							type="date"
 							name="workEndDate"
 							id="workEndDate"
-							className="block w-full px-2 py-1 "
+							className="block w-full rounded-md border-gray-300 px-2 py-1"
 						/>
 					</div>
 					<div>
@@ -62,13 +62,13 @@ class WorkExperience extends Component {
 							type="text"
 							name="workDescription"
 							id="workDescription"
-							className="block w-full px-2 py-1"
+							className="block w-full rounded-md border-gray-300 px-2 py-1"
 						/>
 					</div>
 				</form>
 				<button
 					type="button"
-					className="mt-4  bg-indigo-600 px-4 py-2 text-white hover:bg-indigo-800"
+					className="mt-4 rounded-md bg-indigo-700 px-4 py-2 text-white transition-colors hover:bg-indigo-500"
 				>
 					Add
 				</button>
