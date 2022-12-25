@@ -2,9 +2,15 @@ import React, { Component } from 'react';
 
 class General extends Component {
 	render() {
-		const { name, surname, role, phone, email, description } =
-			this.props.general;
-		const { handleGeneralChange } = this.props;
+		const {
+			name,
+			surname,
+			role,
+			phone,
+			email,
+			description,
+			handleGeneralChange,
+		} = this.props;
 
 		return (
 			<div>
