@@ -5,12 +5,14 @@ class WorkExperiencePreview extends Component {
 		const { companyName, position, startDate, endDate, description } =
 			this.props.workExperience;
 		return (
-			<div className="border">
-				<span className="block">{companyName}</span>
-				<span className="block">{position}</span>
-				<span className="block">{startDate}</span>
-				<span className="block">{endDate}</span>
-				<span className="block">{description}</span>
+			<div>
+				<div className="mb-1 flex justify-between">
+					<span className="font-medium">{position}</span>
+					<span>
+						{companyName} | {startDate} - {endDate}
+					</span>
+				</div>
+				<span className="block font-light">{description}</span>
 			</div>
 		);
 	}

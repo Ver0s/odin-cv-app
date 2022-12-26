@@ -5,12 +5,14 @@ class EducationPreview extends Component {
 		const { major, university, startDate, endDate, description } =
 			this.props.education;
 		return (
-			<div className="border">
-				<span className="block">{major}</span>
-				<span className="block">{university}</span>
-				<span className="block">{startDate}</span>
-				<span className="block">{endDate}</span>
-				<span className="block">{description}</span>
+			<div>
+				<div className="mb-1 flex justify-between">
+					<span className="font-medium">{major}</span>
+					<span>
+						{university} | {startDate} - {endDate}
+					</span>
+				</div>
+				<span className="block font-light">{description}</span>
 			</div>
 		);
 	}
