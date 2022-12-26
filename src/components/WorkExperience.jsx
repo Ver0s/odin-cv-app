@@ -11,17 +11,8 @@ class WorkExperience extends Component {
 		} = this.props;
 
 		return (
-			<div>
-				<div className="mb-2 flex items-center justify-between">
-					<h3 className="text-lg font-bold">Work Experience</h3>
-					<button
-						type="button"
-						onClick={() => handleAddForm('workExperience')}
-						className="rounded-md bg-indigo-500 px-4 py-2 text-white transition-colors hover:bg-indigo-700"
-					>
-						Add
-					</button>
-				</div>
+			<div className="relative">
+				<h3 className="mb-2 text-lg font-bold">Work Experience</h3>
 				<div className="space-y-8">
 					{workExperience.map((workExperienceState) => (
 						<div key={workExperienceState.id}>
@@ -44,6 +35,13 @@ class WorkExperience extends Component {
 						</div>
 					))}
 				</div>
+				<button
+					type="button"
+					onClick={() => handleAddForm('workExperience')}
+					className="absolute bottom-0 right-0 rounded-md bg-indigo-500 px-4 py-2 text-white transition-colors hover:bg-indigo-700"
+				>
+					Add
+				</button>
 			</div>
 		);
 	}
