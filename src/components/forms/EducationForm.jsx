@@ -4,7 +4,7 @@ class EducationForm extends Component {
 	render() {
 		const { major, university, startDate, endDate, description, id } =
 			this.props.education;
-		const { handleEducationChange } = this.props;
+		const { handleArrayChange } = this.props;
 
 		return (
 			<form className="space-y-2">
@@ -17,7 +17,7 @@ class EducationForm extends Component {
 						name="major"
 						id="major"
 						value={major}
-						onChange={(e) => handleEducationChange(e, id)}
+						onChange={(e) => handleArrayChange(e, id, 'education')}
 						className="block w-full rounded-md border-gray-300 px-2 py-1"
 					/>
 				</div>
@@ -30,7 +30,7 @@ class EducationForm extends Component {
 						name="university"
 						id="university"
 						value={university}
-						onChange={(e) => handleEducationChange(e, id)}
+						onChange={(e) => handleArrayChange(e, id, 'education')}
 						className="block w-full rounded-md border-gray-300 px-2 py-1"
 					/>
 				</div>
@@ -43,7 +43,7 @@ class EducationForm extends Component {
 						name="startDate"
 						id="startDate"
 						value={startDate}
-						onChange={(e) => handleEducationChange(e, id)}
+						onChange={(e) => handleArrayChange(e, id, 'education')}
 						className="block w-full rounded-md border-gray-300 px-2 py-1"
 					/>
 				</div>
@@ -56,7 +56,7 @@ class EducationForm extends Component {
 						name="endDate"
 						id="endDate"
 						value={endDate}
-						onChange={(e) => handleEducationChange(e, id)}
+						onChange={(e) => handleArrayChange(e, id, 'education')}
 						className="block w-full rounded-md border-gray-300 px-2 py-1"
 					/>
 				</div>
@@ -69,7 +69,7 @@ class EducationForm extends Component {
 						name="description"
 						id="description"
 						value={description}
-						onChange={(e) => handleEducationChange(e, id)}
+						onChange={(e) => handleArrayChange(e, id, 'education')}
 						className="block w-full rounded-md border-gray-300 px-2 py-1"
 					/>
 				</div>

@@ -46,6 +46,7 @@ class App extends Component {
 			this.handleWorkExperienceChange.bind(this);
 		this.handleEducationChange = this.handleEducationChange.bind(this);
 		this.handleAddForm = this.handleAddForm.bind(this);
+		this.handleArrayChange = this.handleArrayChange.bind(this);
 	}
 
 	handleGeneralChange(e) {
@@ -59,7 +60,7 @@ class App extends Component {
 		}));
 	}
 
-	handleWorkExperienceChange(e, id) {
+	handleArrayChange(e, id, type) {
 		const { target } = e;
 		const value =
 			target.type === 'checkbox' ? target.checked : target.value;
@@ -67,43 +68,17 @@ class App extends Component {
 
 		this.setState((prevState) => {
 			// Find the index of the object with the matching id
-			const index = prevState.workExperience.findIndex(
-				(item) => item.id === id
-			);
+			const index = prevState[type].findIndex((item) => item.id === id);
 
 			// Create a new array with the same items, but with the object at the index updated
-			const workExperience = [
-				...prevState.workExperience.slice(0, index),
-				{ ...prevState.workExperience[index], [name]: value },
-				...prevState.workExperience.slice(index + 1),
+			const updatedArray = [
+				...prevState[type].slice(0, index),
+				{ ...prevState[type][index], [name]: value },
+				...prevState[type].slice(index + 1),
 			];
 
 			// Return the updated state
-			return { workExperience };
-		});
-	}
-
-	handleEducationChange(e, id) {
-		const { target } = e;
-		const value =
-			target.type === 'checkbox' ? target.checked : target.value;
-		const { name } = target;
-
-		this.setState((prevState) => {
-			// Find the index of the object with the matching id
-			const index = prevState.education.findIndex(
-				(item) => item.id === id
-			);
-
-			// Create a new array with the same items, but with the object at the index updated
-			const education = [
-				...prevState.education.slice(0, index),
-				{ ...prevState.education[index], [name]: value },
-				...prevState.education.slice(index + 1),
-			];
-
-			// Return the updated state
-			return { education };
+			return { [type]: updatedArray };
 		});
 	}
 
@@ -160,14 +135,12 @@ class App extends Component {
 					/>
 					<WorkExperience
 						workExperience={workExperience}
-						handleWorkExperienceChange={
-							this.handleWorkExperienceChange
-						}
+						handleArrayChange={this.handleArrayChange}
 						handleAddForm={this.handleAddForm}
 					/>
 					<Education
 						education={education}
-						handleEducationChange={this.handleEducationChange}
+						handleArrayChange={this.handleArrayChange}
 						handleAddForm={this.handleAddForm}
 					/>
 				</section>

@@ -4,7 +4,7 @@ class WorkExperienceForm extends Component {
 	render() {
 		const { companyName, position, startDate, endDate, description, id } =
 			this.props.workExperience;
-		const { handleWorkExperienceChange } = this.props;
+		const { handleArrayChange } = this.props;
 
 		return (
 			<form className="space-y-2">
@@ -17,7 +17,9 @@ class WorkExperienceForm extends Component {
 						name="companyName"
 						id="companyName"
 						value={companyName}
-						onChange={(e) => handleWorkExperienceChange(e, id)}
+						onChange={(e) =>
+							handleArrayChange(e, id, 'workExperience')
+						}
 						className="block w-full rounded-md border-gray-300 px-2 py-1"
 					/>
 				</div>
@@ -30,7 +32,9 @@ class WorkExperienceForm extends Component {
 						name="position"
 						id="position"
 						value={position}
-						onChange={(e) => handleWorkExperienceChange(e, id)}
+						onChange={(e) =>
+							handleArrayChange(e, id, 'workExperience')
+						}
 						className="block w-full rounded-md border-gray-300 px-2 py-1"
 					/>
 				</div>
@@ -43,7 +47,9 @@ class WorkExperienceForm extends Component {
 						name="startDate"
 						id="startDate"
 						value={startDate}
-						onChange={(e) => handleWorkExperienceChange(e, id)}
+						onChange={(e) =>
+							handleArrayChange(e, id, 'workExperience')
+						}
 						className="block w-full rounded-md border-gray-300 px-2 py-1"
 					/>
 				</div>
@@ -56,7 +62,9 @@ class WorkExperienceForm extends Component {
 						name="endDate"
 						id="endDate"
 						value={endDate}
-						onChange={(e) => handleWorkExperienceChange(e, id)}
+						onChange={(e) =>
+							handleArrayChange(e, id, 'workExperience')
+						}
 						className="block w-full rounded-md border-gray-300 px-2 py-1"
 					/>
 				</div>
@@ -69,7 +77,9 @@ class WorkExperienceForm extends Component {
 						name="description"
 						id="description"
 						value={description}
-						onChange={(e) => handleWorkExperienceChange(e, id)}
+						onChange={(e) =>
+							handleArrayChange(e, id, 'workExperience')
+						}
 						className="block w-full rounded-md border-gray-300 px-2 py-1"
 					/>
 				</div>
