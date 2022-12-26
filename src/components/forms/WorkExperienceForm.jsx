@@ -20,7 +20,7 @@ class WorkExperienceForm extends Component {
 						onChange={(e) =>
 							handleArrayChange(e, id, 'workExperience')
 						}
-						className="block w-full rounded-md border-gray-300 px-2 py-1"
+						className="block w-full rounded-md border-gray-300 px-2 py-1 text-sm"
 					/>
 				</div>
 				<div>
@@ -35,7 +35,7 @@ class WorkExperienceForm extends Component {
 						onChange={(e) =>
 							handleArrayChange(e, id, 'workExperience')
 						}
-						className="block w-full rounded-md border-gray-300 px-2 py-1"
+						className="block w-full rounded-md border-gray-300 px-2 py-1 text-sm"
 					/>
 				</div>
 				<div>
@@ -43,14 +43,14 @@ class WorkExperienceForm extends Component {
 						Start Date
 					</label>
 					<input
-						type="date"
+						type="text"
 						name="startDate"
 						id="startDate"
 						value={startDate}
 						onChange={(e) =>
 							handleArrayChange(e, id, 'workExperience')
 						}
-						className="block w-full rounded-md border-gray-300 px-2 py-1"
+						className="block w-full rounded-md border-gray-300 px-2 py-1 text-sm"
 					/>
 				</div>
 				<div>
@@ -58,14 +58,14 @@ class WorkExperienceForm extends Component {
 						End Date
 					</label>
 					<input
-						type="date"
+						type="text"
 						name="endDate"
 						id="endDate"
 						value={endDate}
 						onChange={(e) =>
 							handleArrayChange(e, id, 'workExperience')
 						}
-						className="block w-full rounded-md border-gray-300 px-2 py-1"
+						className="block w-full rounded-md border-gray-300 px-2 py-1 text-sm"
 					/>
 				</div>
 				<div>
@@ -80,7 +80,7 @@ class WorkExperienceForm extends Component {
 						onChange={(e) =>
 							handleArrayChange(e, id, 'workExperience')
 						}
-						className="block w-full rounded-md border-gray-300 px-2 py-1"
+						className="block w-full rounded-md border-gray-300 px-2 py-1 text-sm"
 					/>
 				</div>
 			</form>

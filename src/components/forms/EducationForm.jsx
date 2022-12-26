@@ -18,7 +18,7 @@ class EducationForm extends Component {
 						id="major"
 						value={major}
 						onChange={(e) => handleArrayChange(e, id, 'education')}
-						className="block w-full rounded-md border-gray-300 px-2 py-1"
+						className="block w-full rounded-md border-gray-300 px-2 py-1 text-sm"
 					/>
 				</div>
 				<div>
@@ -31,7 +31,7 @@ class EducationForm extends Component {
 						id="university"
 						value={university}
 						onChange={(e) => handleArrayChange(e, id, 'education')}
-						className="block w-full rounded-md border-gray-300 px-2 py-1"
+						className="block w-full rounded-md border-gray-300 px-2 py-1 text-sm"
 					/>
 				</div>
 				<div>
@@ -39,12 +39,12 @@ class EducationForm extends Component {
 						Start Date
 					</label>
 					<input
-						type="date"
+						type="text"
 						name="startDate"
 						id="startDate"
 						value={startDate}
 						onChange={(e) => handleArrayChange(e, id, 'education')}
-						className="block w-full rounded-md border-gray-300 px-2 py-1"
+						className="block w-full rounded-md border-gray-300 px-2 py-1 text-sm"
 					/>
 				</div>
 				<div>
@@ -52,12 +52,12 @@ class EducationForm extends Component {
 						End Date
 					</label>
 					<input
-						type="date"
+						type="text"
 						name="endDate"
 						id="endDate"
 						value={endDate}
 						onChange={(e) => handleArrayChange(e, id, 'education')}
-						className="block w-full rounded-md border-gray-300 px-2 py-1"
+						className="block w-full rounded-md border-gray-300 px-2 py-1 text-sm"
 					/>
 				</div>
 				<div>
@@ -70,7 +70,7 @@ class EducationForm extends Component {
 						id="description"
 						value={description}
 						onChange={(e) => handleArrayChange(e, id, 'education')}
-						className="block w-full rounded-md border-gray-300 px-2 py-1"
+						className="block w-full rounded-md border-gray-300 px-2 py-1 text-sm"
 					/>
 				</div>
 			</form>
