@@ -15,18 +15,20 @@ class App extends Component {
 				name: 'John',
 				surname: 'Doe',
 				role: 'Software Engineer',
-				phone: '123123123',
+				phone: '123 123 123',
 				email: 'johndoe@gmail.com',
-				description: 'lorem ipsum',
+				description:
+					'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
 			},
 			workExperience: [
 				{
 					id: crypto.randomUUID(),
 					companyName: 'Janusz Soft',
 					position: 'Web Developer',
-					startDate: '21-10-2022',
-					endDate: '21-10-2024',
-					description: 'lorem ipsum dolor samet',
+					startDate: 'Sep 2022',
+					endDate: 'Sep 2024',
+					description:
+						'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.',
 				},
 			],
 			education: [
@@ -34,9 +36,10 @@ class App extends Component {
 					id: crypto.randomUUID(),
 					major: 'Computer Science',
 					university: 'MIT',
-					startDate: '21-10-2022',
-					endDate: '21-10-2024',
-					description: 'lorem ipsum dolor samet',
+					startDate: 'Jan 2019',
+					endDate: 'Apr 2022',
+					description:
+						'At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum.',
 				},
 			],
 		};
@@ -134,7 +137,7 @@ class App extends Component {
 						handleDeleteForm={this.handleDeleteForm}
 					/>
 				</section>
-				<section className="lg:sticky lg:top-10 lg:flex-[2] lg:self-start">
+				<section className="rounded-md border border-gray-300 p-10 lg:sticky lg:top-10 lg:flex-[2] lg:self-start">
 					<GeneneralPreview general={general} />
 					<WorkExperiencePreviewList
 						workExperience={workExperience}
