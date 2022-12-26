@@ -42,10 +42,8 @@ class App extends Component {
 		};
 
 		this.handleGeneralChange = this.handleGeneralChange.bind(this);
-		this.handleWorkExperienceChange =
-			this.handleWorkExperienceChange.bind(this);
-		this.handleEducationChange = this.handleEducationChange.bind(this);
 		this.handleAddForm = this.handleAddForm.bind(this);
+		this.handleDeleteForm = this.handleDeleteForm.bind(this);
 		this.handleArrayChange = this.handleArrayChange.bind(this);
 	}
 
@@ -107,21 +105,11 @@ class App extends Component {
 		}));
 	}
 
-	// handleAddWork() {
-	// 	this.setState((prevState) => ({
-	// 		workExperience: [
-	// 			...prevState.workExperience,
-	// 			{
-	// 				id: crypto.randomUUID(),
-	// 				companyName: '',
-	// 				position: '',
-	// 				startDate: '',
-	// 				endDate: '',
-	// 				description: '',
-	// 			},
-	// 		],
-	// 	}));
-	// }
+	handleDeleteForm(type, id) {
+		this.setState((prevState) => ({
+			[type]: prevState[type].filter((item) => item.id !== id),
+		}));
+	}
 
 	render() {
 		const { general, workExperience, education } = this.state;
@@ -137,11 +125,13 @@ class App extends Component {
 						workExperience={workExperience}
 						handleArrayChange={this.handleArrayChange}
 						handleAddForm={this.handleAddForm}
+						handleDeleteForm={this.handleDeleteForm}
 					/>
 					<Education
 						education={education}
 						handleArrayChange={this.handleArrayChange}
 						handleAddForm={this.handleAddForm}
+						handleDeleteForm={this.handleDeleteForm}
 					/>
 				</section>
 				<section className="lg:sticky lg:top-10 lg:flex-[2] lg:self-start">
